@@ -1,2 +1,7 @@
-<site-header />
-<router-outlet /> <!-- Do not remove -->
+<site-header (onNavMenuIconClicked)="nav.toggle()" />
+<mat-sidenav-container>
+    <mat-sidenav #nav mode="side" position="start"></mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet />
+    </mat-sidenav-content>
+</mat-sidenav-container>
